@@ -1,0 +1,44 @@
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="mb-3 mt-5"></div>
+        <h1 class="text" >Addition</h1>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-4"> </div>
+        <div class="col-4">
+           <form action="" [formGroup]="addForm" (ngSubmit)="performAddition()" >
+            <div class="mb-3">
+                <input type="text" placeholder="enter number 1" formControlName="num1">
+                <div class="text-danger form-text " *ngIf="num1?.touched && num1?.invalid">inavlid number1</div>
+            </div>
+            <div class="mb-3">
+                <input type="text" placeholder="enter number 2" formControlName="num2">
+            </div>
+            <div class="text-danger form-text"*ngIf="num2?.touched && num2?.invalid">invalid number 2</div>
+
+            
+            <button type="submit" [disabled]="addForm.invalid">add</button>
+
+           </form>
+<div class="container">
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="mb-3 mb-3">
+            <input type="text" placeholder="Result" value="{{result}}" >
+        </div>
+
+    </div>
+</div>
+
+        </div>
+        <div class="col-4"></div>
+    </div>
+
+</div>
+

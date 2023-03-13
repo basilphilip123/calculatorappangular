@@ -1,0 +1,36 @@
+
+<div class="container">
+    <div class="row">
+        <div class="mb-3 mt-5"></div>
+        <h1>Subtraction</h1>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4">
+            <form action="" [formGroup]="subForm" (ngSubmit)="performSubtraction()" >
+                <div class="mb-3">
+                    <input type="text" placeholder="enter number 1" formControlName="num1">
+                    <div class="text-danger form-text" *ngIf="num1?.touched && num1?.invalid" ></div>
+                </div><div class="mb-3">
+                    <input type="text" placeholder="enter number 2" formControlName="num2">
+                </div>
+                <button type="submit" [disabled]="subForm.invalid">sub</button>
+    
+               </form>
+        </div>
+        <div class="col-4"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-4"></div>
+                <div class="col-4">
+                    <input type="text" placeholder="Result" value="{{result}}" >
+                </div>
+        
+            </div>
+        </div>
+        
+    </div>
+
+</div>
